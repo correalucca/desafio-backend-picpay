@@ -1,7 +1,7 @@
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
-COPY target/agendamento-notificacao-api-0.0.1-SNAPSHOT.jar app.jar
+COPY target/sistema-transferencias-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

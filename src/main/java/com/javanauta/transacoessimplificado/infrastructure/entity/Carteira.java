@@ -16,7 +16,6 @@ public class Carteira {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private BigDecimal saldo;
 
     @JoinColumn(name = "usuario_id")

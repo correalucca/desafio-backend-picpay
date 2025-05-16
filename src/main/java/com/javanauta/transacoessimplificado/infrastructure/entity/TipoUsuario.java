@@ -1,7 +1,6 @@
 package com.javanauta.transacoessimplificado.infrastructure.entity;
 
 public enum TipoUsuario {
-
-    COMUM,
-    LOJISTA
+    PESSOA_FISICA,
+    PESSOA_JURIDICA
 }

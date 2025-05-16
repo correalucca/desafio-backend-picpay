@@ -50,7 +50,7 @@ public class TransacaoService {
 
     private void validaPagadorLojista(Usuario usuario) {
         try {
-            if (usuario.getTipoUsuario().equals(TipoUsuario.LOJISTA)) {
+            if (usuario.getTipoUsuario().equals(TipoUsuario.PESSOA_JURIDICA)) {
                 throw new IllegalArgumentException("Transação não autorizada para esse tipo de usuario");
             }
         } catch (Exception e) {

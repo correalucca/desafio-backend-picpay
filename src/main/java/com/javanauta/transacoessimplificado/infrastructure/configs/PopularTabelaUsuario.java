@@ -22,17 +22,16 @@ public class PopularTabelaUsuario {
             if (usuarioRepository.count() == 0) {
                 BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-                Usuario usuario1 = new Usuario(null, "Carlos Silva", "carlos@email.com", "101111111111",
-                        encoder.encode("123456"), null, TipoUsuario.COMUM);
+                Usuario usuario1 = new Usuario(null, "João Silva", "joao@email.com", "101111111111",
+                        encoder.encode("123456"), null, TipoUsuario.PESSOA_FISICA);
 
-                Usuario usuario2 = new Usuario(null, "Ana Souza", "ana@email.com", "22222222222",
-                        encoder.encode("123456"), null, TipoUsuario.COMUM);
+                Usuario usuario2 = new Usuario(null, "Maria Santos", "maria@email.com", "22222222222",
+                        encoder.encode("123456"), null, TipoUsuario.PESSOA_FISICA);
 
-                Usuario lojista = new Usuario(null, "Loja Exemplo", "loja@email.com", "33333333333",
-                        encoder.encode("123456"), null, TipoUsuario.LOJISTA);
+                Usuario lojista = new Usuario(null, "Mercado Local", "mercado@email.com", "33333333333",
+                        encoder.encode("123456"), null, TipoUsuario.PESSOA_JURIDICA);
 
                 usuarioRepository.saveAll(List.of(usuario1, usuario2, lojista));
-
 
                 Carteira carteira1 = new Carteira(null, new BigDecimal("1000.00"), usuario1);
                 Carteira carteira2 = new Carteira(null, new BigDecimal("2000.00"), usuario2);
